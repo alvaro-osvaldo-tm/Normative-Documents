@@ -1,0 +1,10 @@
+{
+  "hidden": true,
+  "hiddenList": [
+    "package.json",
+    "package-lock.json",
+    "tools",
+    "node_modules",
+    "Makefile"
+  ]
+}
