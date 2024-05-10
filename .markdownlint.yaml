@@ -1,0 +1,4 @@
+default: true
+
+# Disable MD013 rule
+MD013: false
