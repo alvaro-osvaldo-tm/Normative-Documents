@@ -1,4 +1,3 @@
 # CoBang
 
-
-https://github.com/hongquan/CoBang
+<https://github.com/hongquan/CoBang>

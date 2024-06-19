@@ -22,8 +22,8 @@ If you only want to read without build , [VS Code](https://code.visualstudio.com
 
 If you want to to distribute, read on web or build as '[Sphinx](https://www.sphinx-doc.org/)' documentation the follow requirements are mandatory:
 
-- GNU 'Make' , most available in Linux distributions it's required to process the build workflow.
-- [Docker](https://www.docker.com/) in their Desktop or Server version , this repository was successful tested with Docker server 20.10 and should work in version later. It's mandatory to manage python's requirements , otherwise you can execute the build process directly.
+-   GNU 'Make' , most available in Linux distributions it's required to process the build workflow.
+-   [Docker](https://www.docker.com/) in their Desktop or Server version , this repository was successful tested with Docker server 20.10 and should work in version later. It's mandatory to manage python's requirements , otherwise you can execute the build process directly.
 
 If you want to build without a Docker, then GNU 'Make', [https://www.python.org/](Python) 3.8 or later it's mandatory, handling python requirements is described in [Building](#building) process. For documents lint you must use [https://nodejs.org](Node.js) v20.13 LTS or later.
 
@@ -31,9 +31,9 @@ If you want to build without a Docker, then GNU 'Make', [https://www.python.org/
 
 This repository contains textual guidelines , no automated tools are provided to follow the guidelines.
 
-- For a quick use VSCode or Obsidian software can be used for reading or editing content, just use your software to open the '_Documents_' directory.
+-   For a quick use VSCode or Obsidian software can be used for reading or editing content, just use your software to open the '_Documents_' directory.
 
-- For publishing or distribution you need to build the 'Sphinx' documentation into 'Builds' directory. The section '[Building](#building)' describes how to build the documentation or distribute as Python package.
+-   For publishing or distribution you need to build the 'Sphinx' documentation into 'Builds' directory. The section '[Building](#building)' describes how to build the documentation or distribute as Python package.
 
 ## Building
 
@@ -73,8 +73,8 @@ New Obsidian configuration plugins will only be careful allowed to merge due sec
 
 ## Further Work
 
-- For future releases it's expected that this repository grows in maturity and include conceptual operations and automatic tools for validations.
+-   For future releases it's expected that this repository grows in maturity and include conceptual operations and automatic tools for validations.
 
-- Automatic container deployment will be implemented using 'Buildbot'.
+-   Automatic container deployment will be implemented using 'Buildbot'.
 
-- The build process was made for an old and stable python version , but newer versions available in popular Linux distributions and the newer Python version should be validated.
+-   The build process was made for an old and stable python version , but newer versions available in popular Linux distributions and the newer Python version should be validated.

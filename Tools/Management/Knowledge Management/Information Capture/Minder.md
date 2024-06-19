@@ -1,3 +1,3 @@
 # Minder
 
-https://github.com/phase1geo/minder/
+<https://github.com/phase1geo/minder/>

@@ -1,3 +1,3 @@
 # Frog
 
-https://getfrog.app/
+<https://getfrog.app/>

@@ -1,3 +1,3 @@
 # PDF Arranger
 
-https://github.com/pdfarranger/pdfarranger
+<https://github.com/pdfarranger/pdfarranger>

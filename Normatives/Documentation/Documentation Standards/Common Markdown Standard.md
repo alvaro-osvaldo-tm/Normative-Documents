@@ -8,4 +8,4 @@ These standard is compatible with VSCode IDE
 
 ## References
 
-https://commonmark.org/
+<https://commonmark.org/>

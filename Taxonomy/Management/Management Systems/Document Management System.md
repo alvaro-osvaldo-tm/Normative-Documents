@@ -1,6 +1,5 @@
 # Document Management System
 
-
 "software that provides an automated way to store, manage and track electronic documents" [^WikiData]
 
 ## References
