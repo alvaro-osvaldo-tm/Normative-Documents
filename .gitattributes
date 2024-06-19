@@ -1,3 +1,5 @@
+*.md text=lf
+
 docs/** -linguist-documentation
 docs/**/*.md linguist-detectable
 docs/**/*.html linguist-generated
