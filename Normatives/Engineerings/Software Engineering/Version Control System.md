@@ -8,11 +8,11 @@ The configurations described are is for the current source repository that appli
 
 ## Git Limitations
 
--   Although git can be used to control textual documents like specifications and documents , it SHOULD NOT be considered a [Document Management System](../../../Taxonomy/Management/Management%20Systems/Document%20Management%20System.md) due the lack of support for specialised cataloguing and retrieval functions.
+- Although git can be used to control textual documents like specifications and documents , it SHOULD NOT be considered a [Document Management System](../../../Taxonomy/Management/Management%20Systems/Document%20Management%20System.md) due the lack of support for specialised cataloguing and retrieval functions.
 
 ## Branch Configurations
 
--   The mais branch MUST BE 'main'.
+- The mais branch MUST BE 'main'.
 
 ## Git configurations for users
 

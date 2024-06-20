@@ -10,7 +10,6 @@ Obsidian was choose to be a low-cost tool that require low computer resources an
 
 However, a better approach it's to use a multi-user tool like [WikiJS](WikiJS.md), capable to support Git-based repositories and multi-user editing.
 
-
 ## References
 
-- Obisidian. https://obsidian.md/
+- Obisidian. <https://obsidian.md/>
