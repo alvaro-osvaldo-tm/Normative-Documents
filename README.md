@@ -81,16 +81,22 @@ New Obsidian configuration plugins will only be careful allowed to merge due sec
 
 -   The build process was made for an old and stable python version , but newer versions available in popular Linux distributions and the newer Python version should be validated.
 
-- [Obisian](Tools/Management/Knowledge%20Management/Information%20Capture/Obisian.md) support will be constrained in favor to [WikiJS](Tools/Management/Knowledge%20Management/Information%20Capture/WikiJS.md) or other low-cost alternative to support better multi-user editing and git storage.
+- [Obsidian](Tools/Management/Knowledge%20Management/Information%20Capture/Obsidian.md) support will be constrained in favor to [WikiJS](Tools/Management/Knowledge%20Management/Information%20Capture/WikiJS.md) or other low-cost alternative to support better multi-user editing and git storage.
 
 
 ### 0.0.1
 
-- [ ] Support for build the documentation with Sphinx.
+- [ ] Support documentation's build with Sphinx.
 - [ ] Build pipeline with Buildbot.
+	- [ ] Support Linter.
+	- [ ] Support Changelog file.
 - [ ] Formalised taxonomy.
-- [ ] Support systems engineering process.
+- [ ] Support basic systems engineering process.
 
+### 0.0.2
+
+- [ ] Improve systems engineering process.
+	- [ ] Support Requirements gathering process
 
 ### 0.1.0
 
