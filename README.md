@@ -16,6 +16,8 @@ This repository is a work in progress , so still requires a more formal engineer
 
 Also, lacks for tools to validate the guidelines.
 
+It's possible to read the next features to be released in [Roadmap](#Roadmap) section.
+
 ## Requirements
 
 If you only want to read without build , [VS Code](https://code.visualstudio.com/) or [https://obsidian.md/](Obsidian) software is enough, see the section [Usage](#usage) below for instructions.
@@ -71,10 +73,30 @@ Anyone can contribute, you can use VSCode to edit the document and send a 'reque
 
 New Obsidian configuration plugins will only be careful allowed to merge due security constraints.
 
-## Further Work
+## Roadmap
 
 -   For future releases it's expected that this repository grows in maturity and include conceptual operations and automatic tools for validations.
 
 -   Automatic container deployment will be implemented using 'Buildbot'.
 
 -   The build process was made for an old and stable python version , but newer versions available in popular Linux distributions and the newer Python version should be validated.
+
+- [Obisian](Tools/Management/Knowledge%20Management/Information%20Capture/Obisian.md) support will be constrained in favor to [WikiJS](Tools/Management/Knowledge%20Management/Information%20Capture/WikiJS.md) or other low-cost alternative to support better multi-user editing and git storage.
+
+
+### 0.0.1
+
+- [ ] Support for build the documentation with Sphinx.
+- [ ] Build pipeline with Buildbot.
+- [ ] Formalised taxonomy.
+- [ ] Support systems engineering process.
+
+
+### 0.1.0
+
+- [ ] Full [WikiJS](Tools/Management/Knowledge%20Management/Information%20Capture/WikiJS.md) support.
+
+
+### 0.2.0
+
+- [ ] Support for system and business architecture definition.
