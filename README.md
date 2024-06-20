@@ -87,15 +87,15 @@ New Obsidian configuration plugins will only be careful allowed to merge due sec
 
 - [ ] Support documentation's build with Sphinx.
 - [ ] Build pipeline with Buildbot.
- 	- [ ] Support Linter.
- 	- [ ] Support Changelog file.
+  - [ ] Support Linter.
+  - [ ] Support Changelog file.
 - [ ] Formalised taxonomy.
 - [ ] Support basic systems engineering process.
 
 ### 0.0.2
 
 - [ ] Improve systems engineering process.
- 	- [ ] Support Requirements gathering process
+  - [ ] Support Requirements gathering process
 
 ### 0.1.0
 
