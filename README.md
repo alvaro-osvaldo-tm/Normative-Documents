@@ -85,22 +85,29 @@ New Obsidian configuration plugins will only be careful allowed to merge due sec
 
 ### 0.0.1
 
+- [ ] Documents repository's purposes and rationale.
 - [ ] Support documentation's build with Sphinx.
 - [ ] Build pipeline with Buildbot.
   - [ ] Support Linter.
   - [ ] Support Changelog file.
 - [ ] Formalised taxonomy.
-- [ ] Support basic systems engineering process.
+- [ ] Support basic systems engineering practice.
 
 ### 0.0.2
 
-- [ ] Improve systems engineering process.
-  - [ ] Support Requirements gathering process
+- [ ] Improve systems engineering practice.
+  - [ ] Support Requirements gathering practice
 
 ### 0.1.0
 
-- [ ] Full [WikiJS](Tools/Management/Knowledge%20Management/Information%20Capture/WikiJS.md) support.
+- [ ] Minimal [WikiJS](Tools/Management/Knowledge%20Management/Information%20Capture/WikiJS.md) support.
 
 ### 0.2.0
+
+- [ ] Allow to execute procedure into WikiJS
+	- [ ] Including checklists
+
+
+### 0.3.0
 
 - [ ] Support for system and business architecture definition.
