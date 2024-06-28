@@ -1,6 +1,6 @@
 # Mermaid
 
-A javascript diagramming and charting tool , support on [VSCode](../../../Tools/Engineerings/Software%20Engineering/IDE/VSCode.md), [Obsidian](../../../Tools/Management/Knowledge%20Management/Information%20Capture/Obsidian.md) and [WikiJS](../../../Tools/Management/Knowledge%20Management/Information%20Capture/WikiJS.md).
+A javascript diagramming and charting tool , support on [VSCode](../../../Tools/Engineering/Software%20Engineering/IDE/VSCode.md), [Obsidian](../../../Tools/Management/Knowledge%20Management/Information%20Capture/Obsidian.md) and [WikiJS](../../../Tools/Management/Knowledge%20Management/Information%20Capture/WikiJS.md).
 
 ## Rationale
 
