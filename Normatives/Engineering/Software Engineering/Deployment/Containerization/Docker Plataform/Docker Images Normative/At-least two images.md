@@ -1,9 +1,10 @@
-# Docker Images Normative
+# Environment Definition
 
+This normative normalize the concept of at-least two images for the same code base, one only for production and other only for development.
 
 ## Additional Information
 
-These normative structure is based in 12-factor app [^1][^2].
+This normative structure is based in 12-factor app [^1][^2].
 
 ## Code Base
 
