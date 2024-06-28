@@ -83,6 +83,11 @@ New Obsidian configuration plugins will only be careful allowed to merge due sec
 
 - [Obsidian](Tools/Management/Knowledge%20Management/Information%20Capture/Obsidian.md) support will be constrained in favor to [WikiJS](Tools/Management/Knowledge%20Management/Information%20Capture/WikiJS.md) or other low-cost alternative to support better multi-user editing and git storage.
 
+
+### Current release
+
+-  Add information for end-to-end encryption backup case on [Smartphone Formatting Operation](Operations/Infraestructure/Physical/Mobile/Smartphone/Smartphone%20Formatting%20Operation.md).
+
 ### 0.0.1
 
 - [ ] Documents repository's purposes and rationale.
