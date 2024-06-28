@@ -8,19 +8,15 @@ This normative structure is based in 12-factor app [^1][^2].
 
 ## Code Base
 
-- An image MUST CONTAINS at least two usable version for same code base: 
-	- These version MUST BE:
-		- A "production" for production usage
-		- A "development" for specific development usage , like file monitoring tools to restart services when code is edited.
-	- In both case a [configuration](#Config) [^APP_ENV] MUST BE defined to allow the container to identify their state.
-
 ## Dependencies
 
 ## Config
 
-- An image MUST CONTAINS an environment variable called 'APP_ENV' [^APP_ENV] that MUST be one of these values:
-	- production: To indicate the container MUST run for production.
-	- development: To indicate the container MUST run for development.
+- For the same code base always MUST BE at least two configurations modes for the same code base define in the environment variable 'APP_ENV' [^app_env] 
+	- These variable MUST support these two values: 
+		- production: To indicate the container MUST run for production.
+		- development: To indicate the container MUST run for development.
+	- Other values for the 'APP_ENV' MUST BE avoided.
 
 ## Backing Services
 
