@@ -3,6 +3,10 @@
 
 node_modules
 
+# Archimate Modeling Tool
+
+*.archimate.bak
+
 # Security Locks
 
 .obsidian
