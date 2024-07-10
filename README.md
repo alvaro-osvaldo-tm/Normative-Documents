@@ -89,6 +89,7 @@ New Obsidian configuration plugins will only be careful allowed to merge due sec
 -  Add information for end-to-end encryption backup case on [Smartphone Formatting Operation](Operations/Infraestructure/Physical/Mobile/Smartphone/Smartphone%20Formatting%20Operation.md).
 
 ### 0.0.1
+Release basic build and documentation support.
 
 - [ ] Documents repository's purposes and rationale.
 - [ ] Support documentation's build with Sphinx.
@@ -98,21 +99,44 @@ New Obsidian configuration plugins will only be careful allowed to merge due sec
 - [ ] Formalised taxonomy.
 - [ ] Support basic systems engineering practice.
 
-### 0.0.2
-
-- [ ] Improve systems engineering practice.
-  - [ ] Support Requirements gathering practice
-
-### 0.1.0
+### 0.2.0
+Support collaborative and better editing 
 
 - [ ] Minimal [WikiJS](Tools/Management/Knowledge%20Management/Information%20Capture/WikiJS.md) support.
 
-### 0.2.0
+### 0.3.0
+Release requirements engineering
+
+- [ ] Support systems engineering practice.
+  - [ ] Support Requirements gathering practice
+
+### 0.4.0
+Release security support  
+
+
+- [ ] Support advanced security configuration as:
+	- [ ] AppArmor
+	- [ ] Seccomp
+	- [ ] Capabilities
+- [ ] Support secrets management
+- [ ] Support configuration for Docker User-namespace mapping
+- [ ] Support resources management in application for security purposes 
+	- [ ] Prevent a fork bomb
+	- [ ] Manage CPU usage and Affinity
+	- [ ] Manage Disk IO usage
+- [ ] Support to running untrusted applications 
+- [ ] Support to audit untrusted applications.
+- [ ] Support vulnerability scanning
+	- [ ] Scanning in Docker images
+- [ ] Check viability for [The Update Framework](https://theupdateframework.io/)
+
+### 0.5.0
+Release with a simple document management system.
 
 - [ ] Allow to execute procedure into WikiJS
 	- [ ] Including checklists
 
-
-### 0.3.0
+### 0.6.0
+Release business support.
 
 - [ ] Support for system and business architecture definition.
