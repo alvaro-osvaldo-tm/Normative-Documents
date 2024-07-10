@@ -1,3 +1,3 @@
 # Open Container Specification
 
-https://specs.opencontainers.org
+<https://specs.opencontainers.org>
