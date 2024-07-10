@@ -96,8 +96,11 @@ Release basic build and documentation support.
 - [ ] Build pipeline with Buildbot.
   - [ ] Support Linter.
   - [ ] Support Changelog file.
-- [ ] Formalised taxonomy.
 - [ ] Support basic systems engineering practice.
+- [ ] Basic support for Taxonomy
+	- [x] Taxonomy structure
+	- [ ] Taxonomy's elements identification
+
 
 ### 0.2.0
 Support collaborative and better editing 
