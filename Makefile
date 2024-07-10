@@ -5,6 +5,8 @@ CONTAINER=node:20.14-alpine
 # Docker parameters
 DOCKER=docker run -it --rm -v "$$PWD":/app --workdir /app ${CONTAINER}
 
+all: deps-install  lint
+
 deps-install:
 	# Install all dependencies
 	npm install
