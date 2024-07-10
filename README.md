@@ -37,7 +37,7 @@ This repository contains textual guidelines , no automated tools are provided to
 
 -   For a quick use VSCode or Obsidian software can be used for reading or editing content, just use your software to open the repository.
 
--   For development, a Makefile workflow document is available , only execute `make all` into a terminal for linting execution.
+-   For development, a Makefile workflow document is available , only execute `make all` into a terminal for linting execution. Or `make all-on-docker` to run the linter under a docker container.
 
 ## Contributing
 
