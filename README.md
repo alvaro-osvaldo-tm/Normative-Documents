@@ -7,7 +7,9 @@ This repository contains systems engineering practices normative documents for i
 Specific modules documentation in this repository is found below:
 
 -   [Taxonomy](Taxonomy/README.md): Describes the repository's artefacts classification.
+- [Viewpoints](Viewpoints/README.md): Describes groups of concerns in this repository.
 -   [Externals](Externals/Externals.md): Describes useful externals artefacts.
+
 
 ## Purpose
 
@@ -85,6 +87,7 @@ Release requirements engineering
 
 -   [ ] Support systems engineering practice.
     -   [ ] Support Requirements gathering practice
+- [ ] Better support for viewpoints.
 
 ### 0.4.0
 
