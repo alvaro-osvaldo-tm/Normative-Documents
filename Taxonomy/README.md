@@ -4,7 +4,9 @@ It's a taxonomy to classify the repository's artefacts, it's a work in progress 
 
 It was decided to be organised into directories due the facility to manage in a Directory explorer as "Windows Explorer", "KDE Dolphin" or "VSCode" and be easily integrated into Git.
 
-Many of these taxonomy organisation come from the relationship 'part-of' on [WikiData](https://www.wikidata.org/wiki/Wikidata:Main_Page) english portal, an example how to interpreted is showed in section below.
+Many of these taxonomy organisation come from the relationship 'instance of' and 'subclass of' described on [WikiData](https://www.wikidata.org/wiki/Wikidata:Main_Page) english portal. Each element added to this repository was made under a [System Practitioner](../Viewpoints/Engineering/Systems%20Engineering/System%20Practitioner.md) viewpoint. 
+
+An example how to interpreted the taxonomy is showed in section below.
 
 ## Example
 
