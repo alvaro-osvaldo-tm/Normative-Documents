@@ -3,7 +3,7 @@
 CONTAINER=node:20.14-alpine
 
 # Docker parameters
-DOCKER=docker run -it --rm --user $$(id -u):$$(id -g) -v "$$PWD":/app  -v "$$PWD/.npm":/.npm  --workdir /app
+DOCKER=docker run -it --rm --user $$(id -u):$$(id -g) -v "$$PWD":/app  --workdir /app -e HOME=/app
 
 all: deps-install  lint
 
