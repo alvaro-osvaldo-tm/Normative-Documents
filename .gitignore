@@ -1,3 +1,17 @@
+# Bash and Terminal runtime
+
+.ash_history
+.bash_history
+.profile
+.bashrc
+
+# Caches
+
+.cache
+
+# VsCode
+
+.vscode-server
 
 # Obsidian
 
@@ -12,7 +26,7 @@ node_modules/
 
 *.archimate.bak
 
-# Security Locks
+# Security Ignores
 
 .obsidian
 .python-version
