@@ -1,12 +1,18 @@
 # Bash Container
 
-An Bash runtime container to operate and develop Bash scripts in isolation.
+A runtime container to operate and develop Bash scripts in isolation.
 
-## Ratione
+## Purpose
 
-Usefull avoid expose other files than necessary for a script that manipulate files.
+Offer an standarized image base for both Bash execution and development that can be executed isolated from the develoment or production overwall environment.
 
-Because a script that manipulate files can be a huge risk if can access the whole user's developer files.
+## Rationale
+
+Scripts that manipulate files can presente a huge risk if can acess the overwall production or development files.
+
+A mistake in the script can modify or delete unwanted files.
+
+In an isolated environment as is a Docker container, it's possible to configure de more granular file and systemcalls permissions , protecting the system files from being manipulated by a buggous script.
 
 ## Usage
 
@@ -50,10 +56,33 @@ It's a simples Bash interpreter image, with no special add-ons.
 
 It's an image for development purposes, include the applications:
 
-- entr
-- bat
-- git
-- Bash Debugger
+- entr: To re-execute a script when it's changes.
+- bat: To test Bash scripts.
+- Bash To debug bash scripts.
+- git: For version control mangement.
+
+
+### Developing as daemon
+
+If it's need to keep a container active even if no script is running , as when developing a script using VSCode in remote connection, you can run the container as a dameon configuring the entrypoint as '`tail`' withe paramter '`-f /dev/null`'. It will keep the container waiting 'for nothing' until being finished as the command below shows.
+
+```bash
+# Run as daemon
+$ docker run -d --rm -v "$PWD":/app --entrypoint tail local/bash:0.0.0 -f /dev/null
+```
+
+To finish you need to get the container id with `docker ps` and use it to terminate the daemon as show below.
+
+```bash
+# Get the container id
+$ docker ps 
+...
+
+# Terminate the daemon program , '-t 0' means to do immediate
+$ docker stop -t 0 <id>
+```
+
+
 
 ## Contributing
 
