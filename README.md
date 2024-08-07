@@ -121,3 +121,27 @@ Release with a simple document management system.
 Release business support.
 
 -   [ ] Support for system and business architecture definition.
+
+
+### Further releases
+
+### Data science support
+
+Support data science and business intelligence projects.
+
+- Scope definition
+	- Structural Analysis
+	- Taxonomy and Thesaurus
+- Checklists
+	- Which question the dashboard need to answer ?
+	- Which will be the read-only fields?
+	- Which will data input fields?
+	- Which domains the fields will be ?
+- Guidelines
+	- Design
+		- Presentation
+			- Center the main decision indicators
+			- Fill alerts in red
+			- Define the presentation design standard
+
+
