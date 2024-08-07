@@ -72,6 +72,7 @@ Release basic build and documentation support.
 -   [ ] Basic support for Taxonomy
     -   [x] Taxonomy structure
     -   [ ] Taxonomy's elements identification
+- [ ] Add 'gitkeep' tool, to add '.gitkeep' file in empty directories.
 
 ### 0.2.0
 
