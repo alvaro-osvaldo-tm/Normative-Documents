@@ -59,8 +59,6 @@ New Obsidian configuration plugins will only be careful allowed to merge due sec
 
 ### Current release
 
--   Add information for end-to-end encryption backup case on [Smartphone Formatting Operation](Operations/Infraestructure/Physical/Mobile/Smartphone/Smartphone%20Formatting%20Operation.md).
-
 ### 0.0.1
 
 Release basic build and documentation support.
