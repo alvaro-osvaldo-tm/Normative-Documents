@@ -14,5 +14,8 @@
     "markdownlint": "^0.34.0",
     "markdownlint-cli": "^0.40.0",
     "prettier": "^3.2.5"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.3"
   }
 }
