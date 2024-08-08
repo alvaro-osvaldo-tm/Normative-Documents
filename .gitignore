@@ -16,6 +16,7 @@
 # Obsidian
 
 /.trash/*
+.obsidian
 
 # NodeJS
 
