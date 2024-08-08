@@ -1,4 +1,4 @@
-# Environment Definition
+# Docker Images Normative
 
 This normative define how a Docker Image MUST BE or SHOULD BE build and made available.
 
