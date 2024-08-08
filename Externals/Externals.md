@@ -1,7 +1,4 @@
 # Externals
 
-These section captures tools that conforms the normative documents , these selection is Linux-centric
+This directory captures tools that conforms the normative documents , these selection is Linux-centric
 
-## Rational
-
-## Security Model
