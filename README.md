@@ -124,6 +124,15 @@ Release business support.
 
 ### Further releases
 
+### System documents
+
+Define a set of documents and deliverables to be released for the [stakeholders](Roles/Project/Stakeholders/Project%20Stakeholder%20Role.md) and [engineering team](Roles/Engineering/Engineering%20Role.md) for [Project Management](Taxonomy/Management/Project%20Management/Project%20Management.md).
+
+- Result Demonstration
+	- [ ] Define the [Changelog](Taxonomy/Engineering/Software%20Engineering/Software%20Release/Changelog.md) as a result document deliverable.
+- Quality Demonstration
+	- [ ] Define how to mesure 
+
 ### Data science support
 
 Support data science and business intelligence projects.
