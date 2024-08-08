@@ -11,20 +11,13 @@ The architecture MUST BE defined before starting the commit messages, even there
 
 A basic architectural definitions to be included is defined below:
 
-- sys-repo: System repository
-- sys-req: System requirement
-- sys-spec: Other system specification
-
-
+- sys: System repository
+- req: System requirement
+- spec: Other system specification
 
 
 ## Commit Messages
 
-The commit messages are the starting point for the changelog , therefore its MUST follow the guidelines defined \[CONVETIONAL\]. 
+The commit messages are the starting point for the changelog , therefore it MUST follow the guidelines defined in [conventional commit guideline](../../../../Externals/Engineering/Software%20Engineering/Software%20Release/Commiting/Conventional%20Commit.md), following the changes specified below
 
-The `scope` field MUST BE mandatory and related to the architecture component change.
-
-
-## References
-
--  **CONVETIONAL.** https://www.conventionalcommits.org/en/v1.0.0/
+- The `scope` field MUST BE mandatory and related to the architecture component change.
