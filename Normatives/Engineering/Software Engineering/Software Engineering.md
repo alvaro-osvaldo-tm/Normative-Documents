@@ -18,7 +18,7 @@ However , for this normative document repository a few IDEs will be recommended 
 
 ### Version Control
 
-- The usage a version control system MUST follow the [Version Control](Software%20Management/Version%20Control.md) normative.
+- The usage a version control system MUST follow the [Git Version Control](../../../Building%20Blocks/Architectural%20Building%20Block/Engineering/Software%20Engineering/Software%20Management/Git%20Version%20Control.md) normative.
 
 ## Software Release
 
