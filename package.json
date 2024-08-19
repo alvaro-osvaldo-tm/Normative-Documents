@@ -7,8 +7,7 @@
   },
   "scripts": {
     "markdownlint": "npx markdownlint --ignore node_modules --fix .",
-    "prettier": "npx prettier --ignore-unknown  --write .",
-    "lint": "npm run markdownlint && npm run prettier",
+    "prettier": "npx prettier --ignore-unknown  --write .",    
     "prepare": "husky"
   },
   "dependencies": {

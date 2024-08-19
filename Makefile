@@ -23,7 +23,7 @@ deps-install-on-docker: configure-on-docker
 
 lint:
 	# Execute lint
-	npm run lint
+	npm run markdownlint && npm run prettier
 
 lint-on-docker:
 	# Execute lint on Docker

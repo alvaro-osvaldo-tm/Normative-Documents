@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 # Run linter
-npm run lint
+make lint
 
 # Update index
 git update-index --again
