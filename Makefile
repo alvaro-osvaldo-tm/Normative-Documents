@@ -5,23 +5,11 @@ CONTAINER=node:20.14-alpine
 # Docker parameters
 DOCKER=docker run -it --rm --user $$(id -u):$$(id -g) -v "$$PWD":/app  --workdir /app -e HOME=/app
 
-all: prepare lint
-
-prepare: deps-install dev-prepare
-
-dev-prepare:
-	# Prepare for development
-
-	# Execute husky
-	npm run husky
-
-deps-install:
-	# Install all dependencies
+prepare:
+	# Prepare system for development
 	npm install
 
-lint:
-	# Execute lint
-	npm run markdownlint && npm run prettier
+	npm run prepare
 
 terminal:
 	${DOCKER} --entrypoint /bin/sh ${CONTAINER}
