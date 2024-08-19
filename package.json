@@ -5,15 +5,17 @@
     "type": "git",
     "url": "git@github.com:alvaro-osvaldo-tm/Normative-Documents.git"
   },
-  "scripts": {   
+  "scripts": {
     "lint": "npx prettier --write .",
     "prepare": "npx husky"
   },
-  "dependencies": {    
-  },
   "devDependencies": {
-    "prettier": "^3.2.5",
+    "@commitlint/cli": "^19.4.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "conventional-changelog-atom": "^5.0.0",
+    "husky": "^9.1.4",
     "lint-staged": "^15.2.9",
-    "husky": "^9.1.4"
+    "prettier": "^3.2.5",
+    "typescript": "^5.5.4"
   }
 }

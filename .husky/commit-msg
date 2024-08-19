@@ -1,0 +1,6 @@
+#!/bin/bash -e
+
+echo "Preparando a mensagem"
+
+
+npx commitlint -e
