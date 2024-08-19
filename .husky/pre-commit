@@ -1,7 +1,16 @@
 #!/bin/bash -e
 
 # Run linters
+printf "%s\n" "[INFO] Executing linter."
+
 npx lint-staged
 
 # Update index
+
+printf "%s\n" "[INFO] Updating git index."
+
 git update-index --again
+
+# Done
+
+printf "%s\n" "[INFO] Done."
