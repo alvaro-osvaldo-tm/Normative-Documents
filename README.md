@@ -63,7 +63,6 @@ New Obsidian configuration plugins will only be careful allowed to merge due sec
 
 Release basic build and documentation support.
 
--   [ ] Documents repository's purposes and rationale.
 -   [ ] Support documentation's build with Sphinx.
 -   [ ] Build pipeline with Buildbot.
     -   [ ] Support Linter.
@@ -72,7 +71,7 @@ Release basic build and documentation support.
 -   [x] Basic support for Taxonomy
     -   [x] Taxonomy structure
     -   [ ] Taxonomy's elements identification
-- [ ] Add 'gitkeep' tool, to add '.gitkeep' file in empty directories.
+- [ ] Fix document's links.
 
 ### 0.2.0
 
