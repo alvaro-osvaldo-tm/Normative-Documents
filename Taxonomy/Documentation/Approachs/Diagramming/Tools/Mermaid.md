@@ -8,4 +8,4 @@ Using a diagramming standard that is compatible with main information capturing 
 
 ## References
 
--   Mermaid. <https://mermaid.js.org/>
+- Mermaid. <https://mermaid.js.org/>

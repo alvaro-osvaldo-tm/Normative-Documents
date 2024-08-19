@@ -61,7 +61,6 @@ It's an image for development purposes, include the applications:
 - Bash To debug bash scripts.
 - git: For version control mangement.
 
-
 ### Developing as daemon
 
 If it's need to keep a container active even if no script is running , as when developing a script using VSCode in remote connection, you can run the container as a dameon configuring the entrypoint as '`tail`' withe paramter '`-f /dev/null`'. It will keep the container waiting 'for nothing' until being finished as the command below shows.
@@ -82,15 +81,13 @@ $ docker ps
 $ docker stop -t 0 <id>
 ```
 
-
-
 ## Contributing
 
 There is a directory `container/install/development` to add mode complex development image installations.
 
 For production images the directory `container/install/production` exists for same purpose.
 
-For other cases the `container/Dockefile` can be used , there is two targets , one to generate a __production image__ and other to generate a __development image__.
+For other cases the `container/Dockefile` can be used , there is two targets , one to generate a **production image** and other to generate a **development image**.
 
 Both images can be genareted useing the `Makefile` workflow , there is a task named '_build-all_'  to generate both images. Also there is a task named '_build-production_' to build only the production image and'_build-development_' to build the develpoment image.
 

@@ -1,6 +1,5 @@
 # Execute a task at each commit
 
-
 When using a [Husky](../../Tools/Git%20Version%20Control/Commits/Husky.md), configure the script '.husky/pre-commit' following the sample below:
 
 ```bash

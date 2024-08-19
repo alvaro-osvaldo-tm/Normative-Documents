@@ -2,7 +2,6 @@
 
 A tool to help manage the git hooks
 
+## References
 
-## References 
-
-- https://typicode.github.io/husky/
+- <https://typicode.github.io/husky/>

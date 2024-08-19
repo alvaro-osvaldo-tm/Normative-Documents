@@ -26,6 +26,6 @@ However , for this normative document repository a few IDEs will be recommended 
 
 ## References
 
--   <https://keepachangelog.com/en/1.1.0/>
--   <https://semver.org/spec/v2.0.0.html>
--   <https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/quickstart-for-writing-on-github>
+- <https://keepachangelog.com/en/1.1.0/>
+- <https://semver.org/spec/v2.0.0.html>
+- <https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/quickstart-for-writing-on-github>

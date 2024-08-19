@@ -2,7 +2,6 @@
 
 A guideline for commit messages.
 
-
 ## References
 
--  https://www.conventionalcommits.org
+- <https://www.conventionalcommits.org>

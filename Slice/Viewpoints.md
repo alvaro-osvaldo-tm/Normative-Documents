@@ -6,8 +6,8 @@ It's different from role concept because it's not related to a person or their f
 
 The viewpoint organisation follow the [taxonomy](../Taxonomy/README.md) used in this repository.
 
-## References 
+## References
 
-[^ISO42010]: ISO/IEC/IEEE 42010:2011. Section 4.2.4 Architecture views and viewpoints. <https://www.iso.org/standard/50508.html>. 
+[^ISO42010]: ISO/IEC/IEEE 42010:2011. Section 4.2.4 Architecture views and viewpoints. <https://www.iso.org/standard/50508.html>.
 
-[^SysML1.6]: OMG Systems Modeling Language, v1.6. Section 7.1.1 View and Viewpoint. <https://www.omg.org/spec/SysML/1.6>. 
+[^SysML1.6]: OMG Systems Modeling Language, v1.6. Section 7.1.1 View and Viewpoint. <https://www.omg.org/spec/SysML/1.6>.

@@ -24,7 +24,7 @@ Configurations to be made in the [System Source Repository](../../../../../Taxon
 
 To be applied in the repository branch configuration.
 
--   The main repository branch mais branch MUST BE 'main'.
+- The main repository branch mais branch MUST BE 'main'.
 
 ### Gitattribute file
 
@@ -34,9 +34,7 @@ Some configurations MUST BE
 
 <https://docs.github.com/en/get-started/getting-started-with-git/configuring-git-to-handle-line-endings>
 
-[^git]: [Git. https://git-scm.com/](https://git-scm.com/)
 [^attribute]: [Configurations for .gitattribute](#gitattribute)
-
 
 ### Configurations for user
 
@@ -58,8 +56,6 @@ To be applied using `git config` on the repository server .
 
 The commits message will be used to generate [changelog](../../../../../Taxonomy/Engineering/Software%20Engineering/Software%20Release/Changelog.md), therefore MUST follow the [ChangeLog](../../Software%20Release/ChangeLog.md) guideline.
 
-
-
 ## Controls
 
 ## Demonstration
@@ -68,7 +64,7 @@ The commits message will be used to generate [changelog](../../../../../Taxonomy
 
 ### Solution Limitations
 
--   Although git can be used to control textual documents like specifications and documents , it SHOULD NOT be considered a [Document Management System](../../../../../Taxonomy/Management/Document%20Management/Document%20Management%20System.md) due the lack of support for specialised cataloguing and retrieval functions.
+- Although git can be used to control textual documents like specifications and documents , it SHOULD NOT be considered a [Document Management System](../../../../../Taxonomy/Management/Document%20Management/Document%20Management%20System.md) due the lack of support for specialised cataloguing and retrieval functions.
 
 ## Constraints
 
@@ -80,13 +76,11 @@ The commits message will be used to generate [changelog](../../../../../Taxonomy
 
 ## References
 
-- https://git-scm.com/
-
+- <https://git-scm.com/>
 
 ## Appendix
 
 ### Unexplored Opportunities
-
 
 ### Assessment
 

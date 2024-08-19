@@ -6,16 +6,15 @@
 
 - **Solution Life-Cycle control:**  \<link\>
 
-
 ## Demonstration
 
 ## Analysis
 
 ### Solution Limitations
 
-## Constraints 
+## Constraints
 
-### Risks 
+### Risks
 
 ## Assumptions
 
@@ -23,11 +22,10 @@
 
 ## References
 
-## Appendix 
+## Appendix
 
-### Unexplored Opportunities 
-
+### Unexplored Opportunities
 
 ### Assessment
 
-## Annex 
+## Annex

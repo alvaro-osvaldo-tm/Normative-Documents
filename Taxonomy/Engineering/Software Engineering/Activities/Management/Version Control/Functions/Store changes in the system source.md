@@ -1,4 +1,4 @@
-#  Store changes in the system source
+# Store changes in the system source
 
 Store changes in the system source.
 

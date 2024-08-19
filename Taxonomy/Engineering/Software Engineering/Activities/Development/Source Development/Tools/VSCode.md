@@ -19,4 +19,4 @@ The IDE has been choose for being free. The configurations HAVE NOT the objectiv
 
 ## Reference
 
--   VSCode. <https://code.visualstudio.com/>
+- VSCode. <https://code.visualstudio.com/>
