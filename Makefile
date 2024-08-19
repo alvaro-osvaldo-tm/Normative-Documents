@@ -12,4 +12,5 @@ prepare:
 	npm run prepare
 
 terminal:
+	# Open a docker teriminal for system
 	${DOCKER} --entrypoint /bin/sh ${CONTAINER}
