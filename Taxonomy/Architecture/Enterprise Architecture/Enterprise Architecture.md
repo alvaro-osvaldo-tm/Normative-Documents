@@ -10,18 +10,19 @@ Wikidata (Q1048431) refers it as subclass from "Software Architecture", however 
 
 ## Practiced by
 
-- [Enterprise Architect](../../../Roles/Architecture/Enterprise%20Architecture/Enterprise%20Architect.md)
+-   [Enterprise Architect](../../../Roles/Architecture/Enterprise%20Architecture/Enterprise%20Architect.md)
 
 ## Citations
 
-- From [Open Group. Agility](../../../Externals/Architecture/Enterprise%20Architecture/Frameworks/TOGAF/References/Open%20Group.%20Agility.md) enterprise architecture is:
- 	- *A description of the elements within an organization, what they are meant to achieve, how they are arranged, how they perform in practice, and how they respond to change*
- 	- *A framework (structure, approach, and process) for managing change to those elements and their arrangement; to continuously adapt to organizational change in line with strategy (goals and objectives) and circumstances (specific requirements)*
- 	- *The practice of acting to manage and evolve the Enterprise Architecture at all levels of control, change, and pace*
+-   From [Open Group. Agility](../../../Externals/Architecture/Enterprise%20Architecture/Frameworks/TOGAF/References/Open%20Group.%20Agility.md) enterprise architecture is:
 
-- It's about to align the enterprise elements to the business value.
+    -   _A description of the elements within an organization, what they are meant to achieve, how they are arranged, how they perform in practice, and how they respond to change_
+    -   _A framework (structure, approach, and process) for managing change to those elements and their arrangement; to continuously adapt to organizational change in line with strategy (goals and objectives) and circumstances (specific requirements)_
+    -   _The practice of acting to manage and evolve the Enterprise Architecture at all levels of control, change, and pace_
+
+-   It's about to align the enterprise elements to the business value.
 
 ## References
 
-- **Q1048431**: <https://www.wikidata.org/wiki/Q1048431>
-- [Open Group. Agility](../../../Externals/Architecture/Enterprise%20Architecture/Frameworks/TOGAF/References/Open%20Group.%20Agility.md)
+-   **Q1048431**: <https://www.wikidata.org/wiki/Q1048431>
+-   [Open Group. Agility](../../../Externals/Architecture/Enterprise%20Architecture/Frameworks/TOGAF/References/Open%20Group.%20Agility.md)

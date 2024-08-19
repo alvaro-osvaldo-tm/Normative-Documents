@@ -16,7 +16,7 @@ In an isolated environment as is a Docker container, it's possible to configure 
 
 ## Usage
 
-The container will try to run an '/app/main.sh'  script , **it's necessary that the script be an executable** ( `chmod +x main.sh` ) , otherwise the execution will fail.
+The container will try to run an '/app/main.sh' script , **it's necessary that the script be an executable** ( `chmod +x main.sh` ) , otherwise the execution will fail.
 
 It's possible to send arguments to the scripts simple putting putting the desired parameters when running the script.
 
@@ -56,10 +56,10 @@ It's a simples Bash interpreter image, with no special add-ons.
 
 It's an image for development purposes, include the applications:
 
-- entr: To re-execute a script when it's changes.
-- bat: To test Bash scripts.
-- Bash To debug bash scripts.
-- git: For version control mangement.
+-   entr: To re-execute a script when it's changes.
+-   bat: To test Bash scripts.
+-   Bash To debug bash scripts.
+-   git: For version control mangement.
 
 ### Developing as daemon
 
@@ -74,7 +74,7 @@ To finish you need to get the container id with `docker ps` and use it to termin
 
 ```bash
 # Get the container id
-$ docker ps 
+$ docker ps
 ...
 
 # Terminate the daemon program , '-t 0' means to do immediate
@@ -89,6 +89,6 @@ For production images the directory `container/install/production` exists for sa
 
 For other cases the `container/Dockefile` can be used , there is two targets , one to generate a **production image** and other to generate a **development image**.
 
-Both images can be genareted useing the `Makefile` workflow , there is a task named '_build-all_'  to generate both images. Also there is a task named '_build-production_' to build only the production image and'_build-development_' to build the develpoment image.
+Both images can be genareted useing the `Makefile` workflow , there is a task named '_build-all_' to generate both images. Also there is a task named '_build-production_' to build only the production image and'_build-development_' to build the develpoment image.
 
 No '`docker-entrypoint.sh`' script was incorporated to keep the image use cases simple.

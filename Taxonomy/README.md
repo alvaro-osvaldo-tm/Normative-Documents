@@ -12,8 +12,8 @@ An example how to interpreted the taxonomy is showed in section below.
 
 **The structure:**
 
-- Architecture
-  - Enterprise Architecture
+-   Architecture
+    -   Enterprise Architecture
 
 **Means:**
 

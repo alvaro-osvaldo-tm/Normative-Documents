@@ -16,17 +16,17 @@ The architecture MUST BE defined before starting the commit messages, even there
 
 A basic architectural definitions to be included is defined below:
 
-- sys: System repository
-- req: System requirement
-- spec: Other system specification
+-   sys: System repository
+-   req: System requirement
+-   spec: Other system specification
 
 ## Commit Messages
 
 The commit messages are the starting point for the changelog , therefore it MUST follow the guidelines defined in [conventional commit guideline](../../../../Externals/Engineering/Software%20Engineering/Software%20Release/Changelog/Conventional%20Commit.md), following the changes specified below:
 
-- The `scope` field MUST BE mandatory and related to the architecture component change.
-- The `<type>[optional scope]: <description>` schema MUST HAVE a spaces when describing the scope to make more easily the reading. Therefore the schema change to:
- 	- `<type> [optional scope]: <description>` when no breaking change is specified.
- 	- `<type> [optional scope]! : <description>` when breaking change is specified.
+-   The `scope` field MUST BE mandatory and related to the architecture component change.
+-   The `<type>[optional scope]: <description>` schema MUST HAVE a spaces when describing the scope to make more easily the reading. Therefore the schema change to:
+    -   `<type> [optional scope]: <description>` when no breaking change is specified.
+    -   `<type> [optional scope]! : <description>` when breaking change is specified.
 
 To ensure these standard be full fill by the [developer](../../../../Roles/Engineering/Systems%20Engineering/System%20Developer%20Role.md) , it need to be enforced when applying the message.

@@ -4,7 +4,7 @@
 
 ## Controls
 
-- **Solution Life-Cycle control:**  \<link\>
+-   **Solution Life-Cycle control:** \<link\>
 
 ## Demonstration
 

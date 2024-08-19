@@ -12,4 +12,4 @@ However, a better approach it's to use a multi-user tool like [WikiJS](WikiJS.md
 
 ## References
 
-- Obisidian. <https://obsidian.md/>
+-   Obisidian. <https://obsidian.md/>

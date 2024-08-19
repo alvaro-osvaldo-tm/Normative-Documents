@@ -8,4 +8,4 @@ Being able to import and export Markdown also can be used to visualize and edit 
 
 ## References
 
-- Minder. <https://github.com/phase1geo/minder/>
+-   Minder. <https://github.com/phase1geo/minder/>

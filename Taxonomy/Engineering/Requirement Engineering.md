@@ -4,4 +4,4 @@
 
 ## References
 
-- WikiData. <https://www.wikidata.org/wiki/Q376937>
+-   WikiData. <https://www.wikidata.org/wiki/Q376937>

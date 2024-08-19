@@ -12,11 +12,11 @@ Store the system operational data ou state
 
 ## Who is expected to issue
 
-- [System Developer Role](../../../../../Roles/Engineering/Systems%20Engineering/System%20Developer%20Role.md)
+-   [System Developer Role](../../../../../Roles/Engineering/Systems%20Engineering/System%20Developer%20Role.md)
 
 ## Inputs
 
-- [System Source Code](../../../../../Taxonomy/Engineering/Software%20Engineering/Software%20Development/System%20Source%20Code.md)
+-   [System Source Code](../../../../../Taxonomy/Engineering/Software%20Engineering/Software%20Development/System%20Source%20Code.md)
 
 ## Expected Behaviour
 
