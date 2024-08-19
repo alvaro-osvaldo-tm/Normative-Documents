@@ -5,9 +5,17 @@ CONTAINER=node:20.14-alpine
 # Docker parameters
 DOCKER=docker run -it --rm --user $$(id -u):$$(id -g) -v "$$PWD":/app  --workdir /app -e HOME=/app
 
-all: deps-install  lint
+all: prepare  lint
 
 all-on-docker: deps-install-on-docker  lint-on-docker
+
+prepare: deps-install dev-prepare
+
+dev-prepare:
+	# Prepare for development
+
+	# Execute husky
+	npm run husky
 
 configure-on-docker:
 	# Ensure configuration for Docker usage
