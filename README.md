@@ -69,7 +69,7 @@ Release basic build and documentation support.
     -   [ ] Support Linter.
     -   [ ] Support Changelog file.
 -   [ ] Support basic systems engineering practice.
--   [ ] Basic support for Taxonomy
+-   [x] Basic support for Taxonomy
     -   [x] Taxonomy structure
     -   [ ] Taxonomy's elements identification
 - [ ] Add 'gitkeep' tool, to add '.gitkeep' file in empty directories.
