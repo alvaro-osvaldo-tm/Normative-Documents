@@ -5,14 +5,11 @@
     "type": "git",
     "url": "git@github.com:alvaro-osvaldo-tm/Normative-Documents.git"
   },
-  "scripts": {
-    "markdownlint": "npx markdownlint --ignore node_modules --fix .",
+  "scripts": {   
     "prettier": "npx prettier --ignore-unknown  --write .",
     "prepare": "make prepare"
   },
   "dependencies": {
-    "markdownlint": "^0.34.0",
-    "markdownlint-cli": "^0.40.0",
     "prettier": "^3.2.5"
   },
   "devDependencies": {
