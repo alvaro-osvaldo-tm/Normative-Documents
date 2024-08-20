@@ -1,16 +1,24 @@
-#!/bin/bash -e
+#!/bin/sh
+
+
+# Load terminal helpers
+. "$(dirname "$0")/terminal.sh"
 
 # Run linters
-printf "%s\n" "[INFO] Executing linter."
+INFO "Executing linter."
 
-npx lint-staged
+if ! npx lint-staged ; then
+    ERROR "Lint failed."
+    exit 1
+fi
 
-# Update index
+# Update 'git' index
 
-printf "%s\n" "[INFO] Updating git index."
-
-git update-index --again
+if ! git update-index --again ; then
+    ERROR "Failed to update 'git' index."
+    exit 1
+fi
 
 # Done
 
-printf "%s\n" "[INFO] Done."
+DONE "Lint Done."

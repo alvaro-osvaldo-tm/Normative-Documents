@@ -1,6 +1,17 @@
-#!/bin/bash -e
+#!/bin/sh
 
-echo "Preparando a mensagem"
+# Load terminal helpers
+. "$(dirname "$0")/terminal.sh"
+
+INFO "Checking commit message."
 
 
-npx commitlint -e
+if ! npx commitlint -e ; then
+
+    ERROR "Commit message not allowed."    
+    exit 1
+
+fi
+
+
+DONE "Commit Done."
