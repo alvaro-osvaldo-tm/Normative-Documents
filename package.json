@@ -6,7 +6,7 @@
     "url": "git@github.com:alvaro-osvaldo-tm/Normative-Documents.git"
   },
   "scripts": {
-    "lint": "npx prettier --write .",
+    "lint": "sh ./Tools/development/lint/lint-all.sh",
     "prepare": "npx husky"
   },
   "devDependencies": {
@@ -17,5 +17,8 @@
     "lint-staged": "^15.2.9",
     "prettier": "^3.2.5",
     "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "shellcheck": "^3.0.0"
   }
 }

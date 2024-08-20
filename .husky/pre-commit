@@ -1,8 +1,9 @@
 #!/bin/sh
-
+# shellcheck source=/dev/null
 
 # Load terminal helpers
-. "$(dirname "$0")/terminal.sh"
+
+. "$(dirname "$0")"/terminal.sh
 
 # Run linters
 INFO "Executing linter."

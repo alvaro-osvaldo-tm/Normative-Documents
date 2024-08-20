@@ -1,3 +1,6 @@
 {
-	"*.md": ["npx prettier --ignore-unknown  --write"]
+	"*.md": ["npx prettier --ignore-unknown  --write"],
+	"*.ts": ["npx prettier --ignore-unknown  --write"],
+	"*.sh": ["npx shellcheck"],
+	".husky/*": ["npx shellcheck -e SC1081"]	
 }
