@@ -1,6 +1,6 @@
 {
-	"*.md": ["npx prettier --ignore-unknown  --write"],
-	"*.ts": ["npx prettier --ignore-unknown  --write"],
+	"*.md": ["npx prettier --log-level warn --write"],
+	"*.ts": ["npx prettier --log-level warn --write"],
 	"*.sh": ["npx shellcheck"],
-	".husky/*": ["npx shellcheck -e SC1081"]	
+	".husky/*": ["npx shellcheck -e SC1081"]
 }

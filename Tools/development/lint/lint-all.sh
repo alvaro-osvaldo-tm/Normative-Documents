@@ -8,7 +8,7 @@ cd "$(dirname "$0")/../../.." || exit 1
 
 
 # Lint with prettier
-npx prettier --write .
+npx prettier --log-level warn --write .
 
 
 # Lint all shell files
