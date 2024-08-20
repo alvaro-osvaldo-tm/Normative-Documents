@@ -40,6 +40,40 @@ This repository contains textual guidelines , no automated tools are provided to
 
 -   For development, a Makefile workflow document is available , only execute `make all` into a terminal for linting execution. Or `make all-on-docker` to run the linter under a docker container.
 
+## Slices 
+
+Slices are concepts that segments the taxonomy in artefacts based the [SPEM](https://www.omg.org/spec/SPEM/2.0/About-SPEM),  [Archimate 3](https://pubs.opengroup.org/architecture/archimate3-doc/index.html) and [TOGAF](https://www.opengroup.org/togaf/10thedition) meta-models , this repository not enforce the SPEM usage or meta-model , but simplifies and enhance their elements definitions.
+
+The slices and their meanings are described below:
+
+
+- Motivation: Describes why the taxonomy entity do for the system
+	- Outcome: An expected strategic deliverable result, normally non-tangible.
+	- Role: An expected behaviour on organisation.
+	- Responsibilities: 
+	- Viewpoint: Represents a set of concerns for a role.
+	- Case: Describes how the system interacts 
+	- Value: The relative worth for the system 
+- Logical: Describes what the taxonomy entity do for the system
+	- Activities: Represents a generic basic unit of work, 
+	- Events: Describes a change in system states
+		- Phase: Indicate a significant state for the system that orient the overall work.
+		- Milestone: Indicates an significant result in the system was archived.
+		- Exception: Indicates a non-normal state for the system.
+		- States: Any other system states.
+- Technical: Describes how the use can do a behaviour on the taxonomy entity
+	- Guideline: A document that can be useful to follow or guidance
+	- Metric: A standard measurement for the system
+	- Normative: A document that can be considered as mandatory to be followed.
+	- Books: A textual unit containing useful content
+	- Report: A unit reporting a study result
+	- Articles: An concept exploration or analysis
+	- Patterns: A reusable specification for the system.
+	- Checklist: A list of item that is expected to be checked 
+	- Tool: A tool recommended for the system life-cycle.
+
+
+
 ## Contributing
 
 Anyone can contribute, you can use VSCode to edit the document and send a 'request push' on Github to <https://github.com/alvaro-osvaldo-tm/Normative-Documents> , you collaboration will be appreciated.
