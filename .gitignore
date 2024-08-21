@@ -9,13 +9,18 @@
 
 .cache
 
+# Temporary files
+
+tmp/*
+!tmp/.gitignore
+
 # VsCode
 
 .vscode-server
 
 # Obsidian
 
-/.trash/*
+.trash/*
 .obsidian
 
 # NodeJS
@@ -30,8 +35,9 @@ node_modules/
 
 # Security Ignores
 
-.obsidian
 .python-version
 *-GITIGNORE*
 **/GITIGNORE/**
 *.swp
+
+
