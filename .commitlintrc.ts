@@ -45,7 +45,7 @@ const Configuration: UserConfig = {
 		"header-trim": [RuleConfigSeverity.Error, "always"],
 		"header-full-stop": [RuleConfigSeverity.Error, "never", "."],
 		"signed-off-by": [
-			RuleConfigSeverity.Warning,
+			RuleConfigSeverity.Disabled,
 			"always",
 			"Signed-off-by:",
 		],
