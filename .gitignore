@@ -1,13 +1,13 @@
-# Bash and Terminal runtime
+# Build files
 
-.ash_history
-.bash_history
-.profile
-.bashrc
+/build/*
+!/build/.gitkeep
 
 # Caches
 
 .cache
+.local
+/var/cache
 
 # Temporary files
 
@@ -32,6 +32,14 @@ node_modules/
 # Archimate Modeling Tool
 
 *.archimate.bak
+
+# Bash and Terminal runtime
+
+.ash_history
+.bash_history
+.profile
+.bashrc
+.python_history
 
 # Security Ignores
 

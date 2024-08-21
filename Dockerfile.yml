@@ -3,4 +3,8 @@ FROM node:20.14-alpine
 
 USER ${EUID}
 
-WORKDIR /app
+ENV HOME=/srv/app
+ENV PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/srv/app/.local/bin
+
+
+WORKDIR /srv/app

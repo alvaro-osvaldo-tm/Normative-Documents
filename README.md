@@ -6,7 +6,7 @@ This repository contains systems engineering practices normative documents for i
 
 Specific modules documentation in this repository is found below:
 
--   [Taxonomy](Taxonomy/README.md): Describes the repository's artefacts classification.
+-   [Taxonomy](Taxonomy/index.md): Describes the repository's artefacts classification.
 -   [Viewpoints](Viewpoints/README.md): Describes groups of concerns in this repository.
 -   [Externals](Externals/Externals.md): Describes useful externals artefacts.
 
