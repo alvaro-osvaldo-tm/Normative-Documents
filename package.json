@@ -7,7 +7,7 @@
   },
   "scripts": {
     "lint": "sh ./Tools/development/lint/lint-all.sh",
-    "prepare": "npx husky",
+    "prepare": "make prepare",
     "build" : "make all"
   },
   "devDependencies": {
