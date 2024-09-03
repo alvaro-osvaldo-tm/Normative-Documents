@@ -1,36 +1,8 @@
-# README
+# FullStack Home Lab
 
-This repository contains systems engineering practices normative documents for information systems , it's not indeed to replace any engineering standards but serves as guideline to be applied in programs and projects.
+It's a FullStack plataform following systems engineering practices, mainly focused for information systems processing. It's evolving into a platform engineering practice but oriented to support small solutions common found in home lab experiments insted to become a enterprise-grade plataform.
 
-## Additional information
-
-Specific modules documentation in this repository is found below:
-
--   [Taxonomy](Taxonomy/index.md): Describes the repository's artefacts classification.
--   [Viewpoints](Viewpoints/README.md): Describes groups of concerns in this repository.
--   [Externals](Externals/Externals.md): Describes useful externals artefacts.
-
-## Purpose
-
-This repository was designed to be used on a systems engineering guidelines for existing or new business information systems development and operation.
-
-Scope is limited to business, people, abstractions and information systems programs. More formal or purely physical applications are not covered.
-
-his repository is intended to be read as-is from directories.
-
-## Current Status
-
-This repository is a work in progress , so still requires a more formal engineering structure to be applied.
-
-Also, lacks for tools to validate the guidelines.
-
-It's possible to read the next features to be released in [Roadmap](#roadmap) section.
-
-## Requirements
-
--   For read or edit , [VS Code](https://code.visualstudio.com/) or [https://obsidian.md/](Obsidian) software is enough.
-
--   For development, a lint is avaliable for usage, it will require to use `GNU Make` and [https://nodejs.org](Node.js) v20.13 LTS or later.
+It's not replace or have the inteed to replace a more robust plataform as [Kuberflow](https://www.kubeflow.org/) or public-cloud services, but serves as a quick and low-cost platform.
 
 ## Usage
 
@@ -40,7 +12,38 @@ This repository contains textual guidelines , no automated tools are provided to
 
 -   For development, a Makefile workflow document is available , only execute `make all` into a terminal for linting execution. Or `make all-on-docker` to run the linter under a docker container.
 
-## Slices
+## Requirements
+
+-   For read or edit , [VS Code](https://code.visualstudio.com/) or [https://obsidian.md/](Obsidian) software is enough.
+
+-   For development, a lint is avaliable for usage, it will require to use `GNU Make` and [https://nodejs.org](Node.js) v20.13 LTS or later.
+
+## Repository Purpose
+
+The repository handles the need to deploy small business intelligence and data science programs, not only the computational side but also physical and business side.
+
+Due the small scope of these programs paying for a cloud provider services it's not desired due some programs are for experimentation.
+
+But it's not desired to get away from good practices or constraint the program evolution to an enterprise-class program, so
+
+This repository was designed to be used on a systems engineering guidelines for existing or new business information systems development and operation.
+
+Scope is limited to business, people, abstractions and information systems programs. More formal or purely physical applications are not covered.
+
+his repository is intended to be read as-is from directories.
+
+## Additional information
+
+This repository follows systems engineering practices , there is no need to go deep in these field these practices exists mainly to keep this repository on track of their objectices, if you whant to understand these practices more deep the main documents are referenced below:
+
+-   [Stakeholder Requirement Document](Specification/SRD%20-%20Stakeholder%20Requirements%20Document.md).
+
+If you are interested in understanding the fundamentals of systems engineering practices, you might find the following book and course from MIT OpenCourseWare enjoyable.
+
+-   [Crawley, E., Cameron, B., Selva, D. (2016). System Architecture: Strategy and Product Development for Complex Systems. United Kingdom: Pearson.](https://www.google.com.br/books/edition/System_Architecture/67TuoQEACAAJ?hl=en)
+-   [Fundamentals of Systems Engineering at MIT OpenCourseware , professor Olivier de Weck ](https://ocw.mit.edu/courses/16-842-fundamentals-of-systems-engineering-fall-2015/video_galleries/class-videos/)
+
+### Slices
 
 Slices are concepts that segments the taxonomy in artefacts based the [SPEM](https://www.omg.org/spec/SPEM/2.0/About-SPEM), [Archimate 3](https://pubs.opengroup.org/architecture/archimate3-doc/index.html) and [TOGAF](https://www.opengroup.org/togaf/10thedition) meta-models , this repository not enforce the SPEM usage or meta-model , but simplifies and enhance their elements definitions.
 
@@ -79,15 +82,7 @@ New Obsidian configuration plugins will only be careful allowed to merge due sec
 
 ## Roadmap
 
--   For future releases it's expected that this repository grows in maturity and include conceptual operations and automatic tools for validations.
-
--   Automatic container deployment will be implemented using 'Buildbot'.
-
--   The build process was made for an old and stable python version , but newer versions available in popular Linux distributions and the newer Python version should be validated.
-
--   [Obsidian](Tools/Management/Knowledge%20Management/Information%20Capture/Obsidian.md) support will be constrained in favor to [WikiJS](Tools/Management/Knowledge%20Management/Information%20Capture/WikiJS.md) or other low-cost alternative to support better multi-user editing and git storage.
-
-### Current release
+This repository is a work in progress , so still requires a more formal engineering structure to be applied, for future releases it's expected that this repository grows in maturity and include conceptual operations and automatic tools for validations.
 
 ### 0.0.1
 
@@ -152,7 +147,7 @@ Release business support.
 
 ### Further releases
 
-### System documents
+#### System documents
 
 Define a set of documents and deliverables to be released for the [stakeholders](Roles/Project/Stakeholders/Project%20Stakeholder%20Role.md) and [engineering team](Roles/Engineering/Engineering%20Role.md) for [Project Management](Taxonomy/Management/Project%20Management/Project%20Management.md).
 
@@ -161,7 +156,7 @@ Define a set of documents and deliverables to be released for the [stakeholders]
 -   Quality Demonstration
     -   [ ] Define how to mesure
 
-### Data science support
+#### Data science support
 
 Support data science and business intelligence projects.
 
