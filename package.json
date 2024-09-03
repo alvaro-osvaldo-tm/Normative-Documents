@@ -1,25 +1,18 @@
 {
-  "author": "Álvaro Osvaldo",
-  "license": "GNU Free Documentation License v. 1.3",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:alvaro-osvaldo-tm/Normative-Documents.git"
-  },
-  "scripts": {
-    "lint": "sh ./Tools/development/lint/lint-all.sh",
-    "prepare": "make prepare",
-    "build" : "make all"
-  },
-  "devDependencies": {
-    "@commitlint/cli": "^19.4.0",
-    "@commitlint/config-conventional": "^19.2.2",
-    "conventional-changelog-atom": "^5.0.0",
-    "husky": "^9.1.4",
-    "lint-staged": "^15.2.9",
-    "prettier": "^3.2.5",
-    "typescript": "^5.5.4",
-    "shellcheck": "^3.0.0"
-  },
-  "dependencies": {    
-  }
+	"name": "new-repository",
+	"version": "0.0.0",
+	"author": "",
+	"description": "A new empty git repository",
+	"scripts": {},
+	"dependencies": {},
+	"devDependencies": {
+		"lint-staged": "^15.2.10",
+		"prettier": "^3.3.3",
+		"shellcheck": "^3.0.0",
+		"@commitlint/cli": "^19.4.0",
+		"@commitlint/config-conventional": "^19.2.2",
+		"conventional-changelog-atom": "^5.0.0",
+		"husky": "^9.1.5",
+		"typescript": "^5.5.4"
+	}
 }

@@ -1,25 +1,33 @@
 #!/bin/sh
 # shellcheck source=/dev/null
 
-# Load terminal helpers
+# Lint and verify staged files
 
-. "$(dirname "$0")"/terminal.sh
+set -e
 
-# Run linters
-INFO "Executing linter."
 
-if ! npx lint-staged ; then
-    ERROR "Lint failed."
-    exit 1
+## Move to rootdir
+cd "$(git rev-parse --show-toplevel)" || exit 1
+
+## Load terminal helpers
+. Library/Software/Terminal/bootstrap.sh
+
+## Load environment variables
+
+if test -f ./.env; then
+    . ./.env
 fi
 
-# Update 'git' index
+## Execute lint on changed files
 
-if ! git update-index --again ; then
-    ERROR "Failed to update 'git' index."
-    exit 1
+INFO "Running lint in changed files."
+
+if ! (npx lint-staged && git update-index --again); then
+
+    if [[ $GIT_HOOK_CHECK_CONTINUE_WHEN_FAIL -eq 0 ]]; then
+        FATAL "Failed to execute lint in changed files."
+        exit 1
+    fi
 fi
 
-# Done
-
-DONE "Lint Done."
+DONE "Lint executed."

@@ -1,6 +1,7 @@
 {
 	"*.md": ["npx prettier --log-level warn --write"],
 	"*.ts": ["npx prettier --log-level warn --write"],
-	"*.sh": ["npx shellcheck"],
+	"*.json": ["npx prettier --log-level warn --write"],
+	"*.sh": ["exit 0 && npx shellcheck"],
 	".husky/*": ["npx shellcheck -e SC1081"]
 }

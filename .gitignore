@@ -1,39 +1,46 @@
-# Build files
+# All Gitignore files are centralized here
 
-/build/*
-!/build/.gitkeep
+## IDEs and editors
 
-# Caches
-
-.cache
-.local
-/var/cache
-
-# Temporary files
-
-tmp/*
-!tmp/.gitignore
-
-# VsCode
-
+.idea
+.vscode
+.kate-swp
 .vscode-server
+*.swp
 
-# Obsidian
+## File controls
 
-.trash/*
-.obsidian
+!.gitkeep
 
-# NodeJS
+## R
+
+.Rhistory
+
+## Python
+
+*.pyc
+.python-version
+
+## NodeJS
 
 node_modules/
 .npm/
 .node_repl_history
 
-# Archimate Modeling Tool
+## Dotnet
+
+.dotnet
+
+## Obsidian
+
+.trash/*
+.obsidian
+
+## Archimate Modeling Tool
 
 *.archimate.bak
 
-# Bash and Terminal runtime
+## Bash and Terminal runtime
 
 .ash_history
 .bash_history
@@ -41,11 +48,48 @@ node_modules/
 .bashrc
 .python_history
 
-# Security Ignores
+## Temporary Files and directories
 
-.python-version
-*-GITIGNORE*
-**/GITIGNORE/**
-*.swp
+/tmp/*
+!/tmp/.gitkeep
+
+## Variable files
+
+/var/**
+!/var/**/.gitkeep
+!/var/**/.gitignore
+
+## Logs files
+
+var/log/**
+*.log
+
+## Build files
+
+/build/*
+!/build/.gitkeep
+/dist/*
+
+## Caches Files
+
+.cache
+.local
+/var/cache
 
 
+## Repositores
+
+/Repositories/**
+
+## Applications
+
+/Applications/**
+
+## Infrastructure
+
+/Infrastructure/Repositories/**
+
+## Security Rules
+
+.ssh
+.env

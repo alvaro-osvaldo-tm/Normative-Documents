@@ -1,5 +1,24 @@
 [project]
+name = "new-repository"
+version = "0.0.0"
+authors = [
+  { name="ÁLvaro Osvaldo", email="alvaro@osvaldo.dev" },
+]
+description = "A new empty git repository"
+readme = "README.md"
+requires-python = ">=3"
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
 
 [project.urls]
+Homepage = ""
+Issues = ""
 
 [build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+

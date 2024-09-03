@@ -1,9 +1,10 @@
 import type { UserConfig } from "@commitlint/types";
 import { RuleConfigSeverity } from "@commitlint/types";
 
+
 /**
  * Return all valid scopes
- * @returns A list of scope altennatives
+ * @returns A list of scope alternatives
  */
 function scopes(): string[] {
 	/**
@@ -13,7 +14,7 @@ function scopes(): string[] {
 
 	const fs = require("node:fs");
 
-	const folderPath = "./Taxonomy";
+	const folderPath = "./Source";
 
 	const scopes = fs
 		.readdirSync(folderPath)
@@ -26,57 +27,70 @@ function scopes(): string[] {
 			 *  - hidden files, like '.gitignore'
 			 *  - Markdown documents, like 'README.md'
 			 */
-			if (item.startsWith(".")) return false;
+			return !(
+				item.startsWith(".") ||
+				item.toLowerCase() == 'readme.md'
+			);
 
-			if (item.endsWith(".md")) return false;
-
-			return true;
 		});
 
 	return scopes;
 }
+
 
 const Configuration: UserConfig = {
 	extends: ["@commitlint/config-conventional"],
 	parserPreset: "conventional-changelog-atom",
 	formatter: "@commitlint/format",
 	rules: {
+
+		/**
+		 * Template:
+		 *  {type}({scope): {subject}
+		 *  {body}
+		 * 
+		 */
+
 		"header-max-length": [RuleConfigSeverity.Warning, "always", 72],
 		"header-trim": [RuleConfigSeverity.Error, "always"],
 		"header-full-stop": [RuleConfigSeverity.Error, "never", "."],
-		"signed-off-by": [
-			RuleConfigSeverity.Disabled,
-			"always",
-			"Signed-off-by:",
-		],
-		"body-full-stop": [RuleConfigSeverity.Error, "never", "."],
-		"subject-empty": [RuleConfigSeverity.Warning, "always"],
+
+		"subject-empty": [RuleConfigSeverity.Warning, "never"],
 		"subject-case": [RuleConfigSeverity.Error, "always", "sentence-case"],
-		"scope-case": [RuleConfigSeverity.Error, "always", "sentence-case"],
 
-		"scope-enum": [RuleConfigSeverity.Error, "always", scopes()],
+		
+				
+		"scope-case": [RuleConfigSeverity.Error, "always", "lower-case"],
+		"scope-enum": [RuleConfigSeverity.Error, "always", scopes() ],
 
-		"type-empty": [RuleConfigSeverity.Warning, "always"],
-
+		"type-empty": [RuleConfigSeverity.Error, "never"],
 		"type-enum": [
 			RuleConfigSeverity.Error,
 			"always",
 			[
 				"build",
-				"lint",
-				"rm",
 				"ci",
-				"spec",
-				"docs",
-				"feat",
+				"security",
+				"specification",
+				"documentation",
+				"feature",
 				"fix",
-				"perf",
-				"refactor",
+				"performance",
+				"refactory",
 				"revert",
 				"ui",
 				"test",
 			],
 		],
+
+		"body-full-stop": [RuleConfigSeverity.Error, "never", "."],
+
+		"signed-off-by": [
+			RuleConfigSeverity.Disabled,
+			"always",
+			"Signed-off-by:",
+		],
+
 	},
 };
 
