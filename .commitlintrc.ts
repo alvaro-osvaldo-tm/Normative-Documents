@@ -1,7 +1,6 @@
 import type { UserConfig } from "@commitlint/types";
 import { RuleConfigSeverity } from "@commitlint/types";
 
-
 /**
  * Return all valid scopes
  * @returns A list of scope alternatives
@@ -27,28 +26,22 @@ function scopes(): string[] {
 			 *  - hidden files, like '.gitignore'
 			 *  - Markdown documents, like 'README.md'
 			 */
-			return !(
-				item.startsWith(".") ||
-				item.toLowerCase() == 'readme.md'
-			);
-
+			return !(item.startsWith(".") || item.toLowerCase() == "readme.md");
 		});
 
 	return scopes;
 }
-
 
 const Configuration: UserConfig = {
 	extends: ["@commitlint/config-conventional"],
 	parserPreset: "conventional-changelog-atom",
 	formatter: "@commitlint/format",
 	rules: {
-
 		/**
 		 * Template:
 		 *  {type}({scope): {subject}
 		 *  {body}
-		 * 
+		 *
 		 */
 
 		"header-max-length": [RuleConfigSeverity.Warning, "always", 72],
@@ -58,10 +51,8 @@ const Configuration: UserConfig = {
 		"subject-empty": [RuleConfigSeverity.Warning, "never"],
 		"subject-case": [RuleConfigSeverity.Error, "always", "sentence-case"],
 
-		
-				
 		"scope-case": [RuleConfigSeverity.Error, "always", "lower-case"],
-		"scope-enum": [RuleConfigSeverity.Error, "always", scopes() ],
+		"scope-enum": [RuleConfigSeverity.Error, "always", scopes()],
 
 		"type-empty": [RuleConfigSeverity.Error, "never"],
 		"type-enum": [
@@ -90,7 +81,6 @@ const Configuration: UserConfig = {
 			"always",
 			"Signed-off-by:",
 		],
-
 	},
 };
 

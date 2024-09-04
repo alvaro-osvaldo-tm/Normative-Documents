@@ -22,7 +22,7 @@ cd "$(git rev-parse --show-toplevel)"
 ## Load terminal helpers
 . "Library/Software/Terminal/bootstrap.sh"
 
-## Remote any failed temporary environment file
+## Remove any failed temporary environment file
 if ! rm .env.tmp.* 2> /dev/null ; then
     :
 fi

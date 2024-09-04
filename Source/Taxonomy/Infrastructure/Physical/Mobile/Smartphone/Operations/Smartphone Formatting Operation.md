@@ -109,4 +109,5 @@ On a smartphone, realize backup, erase all data and restore backup.
 ## Checklists
 
 [^1]: Suspicious softwares that could been used to install malwares. It's necessary to reduce contamination possibility when backup be made.
+
 [^2]: <https://faq.whatsapp.com/481135090640375/?locale=en_UK&cms_platform=android>

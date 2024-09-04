@@ -13,9 +13,6 @@ cd "$(git rev-parse --show-toplevel)" || exit 1
 
 INFO "Checking commit message."
 
-
-npx commitlint -e
-
 if ! npx commitlint -e ; then
 
     ERROR "Commit message not allowed."    

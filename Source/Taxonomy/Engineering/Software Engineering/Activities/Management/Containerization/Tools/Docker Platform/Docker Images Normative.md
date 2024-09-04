@@ -66,7 +66,11 @@ This normative structure is based in 12-factor app [^1][^2], the section `Build,
 ## Administration
 
 [^1]: The Twelve-Factor App. <https://12factor.net/>
+
 [^2]: An illustrated guide to 12 Factor Apps. <https://www.redhat.com/architect/12-factor-app>
+
 [^APP_ENV]: These configuration was learned from Laravel. <https://laravel.com/docs/master/configuration>
+
 [^FROM]: Dockerfile reference. <https://docs.docker.com/reference/dockerfile/#from>
+
 [^ImageSpec]: The OpenContainers Image Spec Config. <https://specs.opencontainers.org/image-spec/config/?v=v1.0.1>
