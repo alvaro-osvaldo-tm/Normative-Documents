@@ -43,6 +43,16 @@ If you are interested in understanding the fundamentals of systems engineering p
 -   [Crawley, E., Cameron, B., Selva, D. (2016). System Architecture: Strategy and Product Development for Complex Systems. United Kingdom: Pearson.](https://www.google.com.br/books/edition/System_Architecture/67TuoQEACAAJ?hl=en)
 -   [Fundamentals of Systems Engineering at MIT OpenCourseware , professor Olivier de Weck ](https://ocw.mit.edu/courses/16-842-fundamentals-of-systems-engineering-fall-2015/video_galleries/class-videos/)
 
+Documents to be published in futher relased
+
+-   Value Stream
+-   Business Analysis
+-   Requirements
+-   Architecture
+-   Maturity Models
+-   Managements
+    -   Risk
+
 ### Slices
 
 Slices are concepts that segments the taxonomy in artefacts based the [SPEM](https://www.omg.org/spec/SPEM/2.0/About-SPEM), [Archimate 3](https://pubs.opengroup.org/architecture/archimate3-doc/index.html) and [TOGAF](https://www.opengroup.org/togaf/10thedition) meta-models , this repository not enforce the SPEM usage or meta-model , but simplifies and enhance their elements definitions.
