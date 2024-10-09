@@ -147,7 +147,7 @@ lint:
 	# Linting the source code
 	# ============================================
 
-	true
+	./Operations/Engineering/Lint/file.sh --verbose --recursive .
 
 
 # ==============================================
