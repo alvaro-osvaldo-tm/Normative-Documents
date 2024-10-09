@@ -98,8 +98,11 @@ This repository is a work in progress , so still requires a more formal engineer
 
 Release basic build and documentation support.
 
+-   [ ] Provide Basic Foundation Architecture
+-   [ ] Provide Architecture Governance Support
+-   [ ] Support Basic Requirements Management
 -   [ ] Support documentation's build with Sphinx.
--   [ ] Build pipeline with Buildbot.
+-   [ ] Build pipeline for GitTea.
     -   [ ] Support Linter.
     -   [ ] Support Changelog file.
 -   [ ] Support basic systems engineering practice.
