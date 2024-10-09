@@ -6,7 +6,7 @@ SHELL=/bin/bash
 -include .env
 
 
-## Aplications 
+## Aplications
 DOCKER_STACK=docker stack
 DOCKER_COMPOSE=docker compose
 
@@ -16,7 +16,7 @@ DOCKER_COMPOSE=docker compose
 
 prepare:
 
-	# ============================================ 
+	# ============================================
 	# Preparing system for development and build
 	# ============================================
 
@@ -24,8 +24,11 @@ prepare:
 	# - Installing Python Requirements
 	# --------------------------------------------
 
+	if ! which pip3 > /dev/null ; then printf "%s\n" "[FATAL] No 'pip3' software found" ; exit 1 ; fi
+
+
 	if [ -f "requirements.txt" ] ; then pip3 install --upgrade pip; fi
-	if [ -f "requirements.txt" ] ; then pip3 install -r requirements.txt; fi
+	if [ -f "requirements.dev.txt" ] ; then pip3 install -r requirements.dev.txt; fi
 
 	# --------------------------------------------
 	# - Installing NodeJS Requirements
@@ -36,27 +39,27 @@ prepare:
 	# --------------------------------------------
 	# - Installing Git Hooks configurations
 	# --------------------------------------------
-	
+
 	npx husky
 	npx shellcheck --version > /dev/null
 
 	# --------------------------------------------
 	# - Creating environment parameters
 	# --------------------------------------------
-	
+
 	Operations/Parameters/create.sh
 
-	# ============================================ 
+	# ============================================
 	# System Ready for development and build
 	# ============================================
 
 
-build:	
+build:
 
 	# Ensure the system was prepared
 	if [ ! -f ".env" ] ; then make prepare; fi
 
-	# ============================================ 
+	# ============================================
 	# Building system
 	# ============================================
 
@@ -66,17 +69,17 @@ build:
 	STACK_RELEASE=${STACK_RELEASE} \
 	${DOCKER_COMPOSE} build
 
-	# ============================================ 
+	# ============================================
 	# System builded
 	# ============================================
 
 
 deploy:
 
-	# ============================================ 
+	# ============================================
 	# Deploying the stack
 	# ============================================
-	
+
 	# Deploy the stack
 
 	DOCKER_BUILDKIT=1 \
@@ -85,47 +88,66 @@ deploy:
 	${DOCKER_STACK} up --compose-file ./compose.yml ${STACK_NAME}
 
 
-	# ============================================ 
+	# ============================================
 	# Stack deployed
 	# ============================================
 
 
 dist: prepare check
 
-	# ============================================ 
+	# ============================================
 	# Preparing system for distribution
 	# ============================================
 
 	python3 -m pip install --upgrade build
 	python3 -m build
 
-	# ============================================ 
+	# ============================================
 	# System build avaliable at "${PWD}/dist"
 	# ============================================
 
-check:	
+.ONESHELL: watch
+watch:
 
-	# ============================================ 
+	set -e
+
+
+	# ============================================
+	# Watching changes for development
+	# ============================================
+
+	if [ ! -f "gulpfile.js" ]; then
+		printf "%s\n%s" "No Gulp file found." "No watcher started." ;
+		exit 0
+	fi
+
+	if ! which entr > /dev/null;  then
+		npx gulp
+		exit 0
+	fi
+
+	echo "gulpfile.js" | entr -rc npx gulp;
+
+
+check:
+
+	# ============================================
 	# Verifying if the system can be build
 	# ============================================
 
 	true
 
-	# ============================================ 
+	# ============================================
 	# System is clear to build
 	# ============================================
 
-lint: 
+lint:
 
-	# ============================================ 
-	# Linting the repository
+	# ============================================
+	# Linting the source code
 	# ============================================
 
-	Operations/Engineering/Lint/file.sh -r -v .
-
-	# ============================================ 
-	# Linting done
-	# ============================================
+	true
 
 
 # ==============================================
@@ -168,14 +190,14 @@ specification:
 	# Generate specification information
 
 	false
-	
+
 traceability:
-	# Generate traceability information 
+	# Generate traceability information
 
 	false
 
 documentation:
-	
+
 	# Generate documentation
 
 	false
@@ -191,7 +213,7 @@ commit:
 
 fetch:
 	git fetch
-	
+
 push:
 	git push --tags
 	git push --all
@@ -210,35 +232,35 @@ test: test-static test-compliance test-security test-performance
 
 	false
 
-test-quick: 
+test-quick:
 
-	# ============================================ 
+	# ============================================
 	# Running minimal tests for system build
 	# ============================================
 
 	false
 
-	# ============================================ 
+	# ============================================
 	# The system is ready for build
-	# ============================================	
+	# ============================================
 
 
-test-static: 
+test-static:
 
-	# ============================================ 
+	# ============================================
 	# Testing source static analysis
 	# ============================================
 
 	false
 
-	# ============================================ 
+	# ============================================
 	# The system was approved in static analysis
-	# ============================================	
+	# ============================================
 
 
 
 test-compliance:
-	# Test system for compliance 
+	# Test system for compliance
 
 	false
 
@@ -246,9 +268,9 @@ test-security:
 	# Test system for security
 
 	false
-	
+
 test-performance:
 
 	# Test system for performance
-	
+
 	false

@@ -93,3 +93,4 @@ var/log/**
 
 .ssh
 .env
+.env.custom

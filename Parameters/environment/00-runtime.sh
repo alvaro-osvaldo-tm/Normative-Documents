@@ -1,4 +1,6 @@
-#!/bin/bash -e
+#!/usr/bin/env bash
+
+set -e
 
 # ==========================================
 # Define main runtime environment variables
@@ -9,6 +11,7 @@ cd "$(git rev-parse --show-toplevel)"
 
 
 ## Load terminal helpers
+# shellcheck disable=SC1091
 . "Library/Software/Terminal/bootstrap.sh"
 
 
@@ -17,7 +20,7 @@ cd "$(git rev-parse --show-toplevel)"
 if ! VERSION=$(Operations/Release/Versioning/current-version.sh); then
 
 
-    WARNING "Unable to determine current repository version." > /dev/stderr
+    WARNING "Unable to determine current repository version." >&2
 
     VERSION="0.0.0dev0"
     

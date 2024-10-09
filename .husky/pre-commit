@@ -5,7 +5,6 @@
 
 set -e
 
-
 ## Move to rootdir
 cd "$(git rev-parse --show-toplevel)" || exit 1
 
@@ -18,16 +17,18 @@ if test -f ./.env; then
     . ./.env
 fi
 
+GIT_HOOK_CHECK_CONTINUE_WHEN_FAIL=${GIT_HOOK_CHECK_CONTINUE_WHEN_FAIL:=0}
+
 ## Execute lint on changed files
 
 INFO "Running lint in changed files."
 
 if ! (npx lint-staged && git update-index --again); then
 
-    if [[ $GIT_HOOK_CHECK_CONTINUE_WHEN_FAIL -eq 0 ]]; then
+    if [ "$GIT_HOOK_CHECK_CONTINUE_WHEN_FAIL" -eq 0 ]; then
         FATAL "Failed to execute lint in changed files."
         exit 1
     fi
 fi
 
-DONE "Lint executed."
+FINISHED "Lint executed."

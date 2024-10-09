@@ -1,0 +1,7 @@
+# Python Development requirements
+
+## Install python production requirements
+-r requirements.txt
+
+## Install python development requirements
+python-semantic-release==9.8.7

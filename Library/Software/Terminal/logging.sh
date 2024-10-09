@@ -66,10 +66,7 @@ LOG() (
 
     # Show the log level
 
-    COLORED=0
-
-    if setterm --foreground "$COLOR"; then
-        COLORED=1
+    if setterm --foreground "$COLOR"; then        
 
         if [ $BLINK -eq 1 ]; then
 
@@ -117,20 +114,21 @@ INFO() (
 
 # Warns the user
 WARNING() (
-    LOG --level "WARNING" --color "yellow" --foreground "white" --message "$@" > /dev/stderr
+    LOG --level "WARNING" --color "yellow" --foreground "white" --message "$@" >&2
 )
 
 # Informs a sucessfull activity
-DONE() (
-    LOG --level "DONE" --color "green" --message "$@"
+FINISHED() (
+    LOG --level "FINSHED" --color "green" --message "$@"
 )
+
 
 # Informs the user a non-valid state
 ERROR() (
-    LOG --level "ERROR" --color "red" --blink --message "$@" > /dev/stderr
+    LOG --level "ERROR" --color "red" --blink --message "$@" >&2
 )
 
 # Informs the user a non-valid state that will end the processing
 FATAL() (
-    LOG --level "FATAL" --color "red" --foreground "white" --message "$@" > /dev/stderr
+    LOG --level "FATAL" --color "red" --foreground "white" --message "$@" >&2
 )

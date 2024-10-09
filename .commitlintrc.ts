@@ -61,26 +61,20 @@ const Configuration: UserConfig = {
 			[
 				"build",
 				"ci",
-				"security",
-				"specification",
-				"documentation",
-				"feature",
+				"docs",
+				"feat",
 				"fix",
-				"performance",
-				"refactory",
+				"perf",
+				"refactor",
+				"test",
 				"revert",
 				"ui",
-				"test",
 			],
 		],
 
 		"body-full-stop": [RuleConfigSeverity.Error, "never", "."],
 
-		"signed-off-by": [
-			RuleConfigSeverity.Disabled,
-			"always",
-			"Signed-off-by:",
-		],
+		"signed-off-by": [RuleConfigSeverity.Error, "always", "Signed-off-by:"],
 	},
 };
 

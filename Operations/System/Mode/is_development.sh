@@ -1,4 +1,6 @@
-#!/bin/bash -e
+#!/usr/bin/env bash
+
+set -e
 
 # ==========================================================
 # Check if the current repository is in development mode
@@ -11,10 +13,11 @@
 cd "$(git rev-parse --show-toplevel)"
 
 ## Load terminal helpers
+# shellcheck disable=SC1091
 . "Library/Software/Terminal/bootstrap.sh"
 
 ## Check by environment variable 'APP_ENV'
-if [ ! -z "$IS_DEV" ]; then
+if [ -n "$IS_DEV" ]; then
 
     if [[ $IS_DEV -eq 0 ]]; then
         exit 0
@@ -31,7 +34,7 @@ fi
 
 if [ -f ".env" ]; then
 
-    ENV=$(grep -Eo "^APP_ENV=(.*)$" .env | tr -d "APP_ENV=")
+    ENV=$(grep -Eo "^APP_ENV=(.*)$" .env | sed "s/APP_ENV=//g" )
 
     if [[ "$ENV" == "production" ]]; then
         exit 0

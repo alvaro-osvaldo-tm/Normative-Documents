@@ -1,14 +1,15 @@
-#!/bin/bash -e
+#!/usr/bin/env bash
+
+set -e
 
 # Create the runtime parameters for execution
 
 function CLEANUP {
 
-    if [ -f "$TEMPORARY" ]; then
-        rm "$TEMPORARY"
+    ## Remove any temporary environment file
+    if ! rm .env.tmp.* 2>/dev/null; then
+        :
     fi
-
-    exit 0
 
 }
 
@@ -17,17 +18,14 @@ trap CLEANUP HUP
 trap CLEANUP TERM
 
 ## Move to rootdir
-cd "$(git rev-parse --show-toplevel)"
+cd "$(git rev-parse --show-toplevel)" || exit 1
 
 ## Load terminal helpers
-. "Library/Software/Terminal/bootstrap.sh"
-
-## Remove any failed temporary environment file
-if ! rm .env.tmp.* 2> /dev/null ; then
-    :
-fi
+# shellcheck disable=SC1091
+. ./Library/Software/Terminal/bootstrap.sh
 
 ## Create a temporary environment file
+CLEANUP
 TEMPORARY=$(mktemp .env.tmp.XXXXX)
 
 if ! touch "$TEMPORARY"; then
@@ -53,8 +51,6 @@ EOF
 
 INFO "Generating parameters:"
 
-
-
 for GENERATOR in Parameters/environment/*.sh; do
 
     if [ ! -f "$GENERATOR" ]; then
@@ -68,11 +64,13 @@ for GENERATOR in Parameters/environment/*.sh; do
         chmod +x "$GENERATOR"
     fi
 
-    printf "%s\n" "# --------------------------------------------------------------" >>"$TEMPORARY"
-    printf "# Section generated from '%s'\n" "$GENERATOR" >>"$TEMPORARY"
-    printf "%s\n" "# --------------------------------------------------------------" >>"$TEMPORARY"
+    {
+        printf "%s\n" "# --------------------------------------------------------------"
+        printf "# Section generated from '%s'\n" "$GENERATOR"
+        printf "%s\n" "# --------------------------------------------------------------"
+    } >>"$TEMPORARY"
 
-    if ! "$GENERATOR" >> "$TEMPORARY"; then
+    if ! "$GENERATOR" >>"$TEMPORARY"; then
 
         FATAL "Failed to execute generator '$GENERATOR'."
         exit 1
@@ -92,9 +90,11 @@ for FILE in Parameters/environment/*.env; do
         continue
     fi
 
-    printf "%s\n" "# --------------------------------------------------------------" >>"$TEMPORARY"
-    printf "# Section loaded from '%s'\n" "$GENERATOR" >>"$TEMPORARY"
-    printf "%s\n" "# --------------------------------------------------------------" >>"$TEMPORARY"
+    {
+        printf "%s\n" "# --------------------------------------------------------------"
+        printf "# Section loaded from '%s'\n" "$GENERATOR"
+        printf "%s\n" "# --------------------------------------------------------------"
+    } >>"$TEMPORARY"
 
     INFO "- '$FILE'"
 
@@ -103,10 +103,19 @@ for FILE in Parameters/environment/*.env; do
 
 done
 
+## Load Custom environment configuration
+
+INFO "Appending custom environment configuration"
+
+if [ -f .env.custom ]; then
+    printf "\n\n" >>"$TEMPORARY"
+    cat .env.custom >>"$TEMPORARY"
+fi
+
 ## Replace the '.env' file with the generated file
 
 cat "$TEMPORARY" >.env
 
 CLEANUP
 
-DONE "Parameters generated"
+FINISHED "Parameters generated"

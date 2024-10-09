@@ -9,9 +9,10 @@ cd "$(git rev-parse --show-toplevel)" || exit 1
 if ! VERSION=$(Operations/Release/Versioning/current-version.sh --only-stack 2>/dev/null); then
 
     ## Load terminal helpers
+    # shellcheck disable=SC1091
     . "Library/Software/Terminal/bootstrap.sh"
 
-    ERROR "Unable to determine current stack version." >/dev/stderr
+    WARNING "Unable to determine current stack version." >&2
 
     VERSION="unversioned"
 
@@ -20,7 +21,7 @@ fi
 ## Get the system operation mode
 MODE=$(Operations/System/Mode/describe.sh)
 
-if [ $MODE == "production" ]; then
+if [ "$MODE" == "production" ]; then
     MODE=""
 else
     MODE="-$MODE"

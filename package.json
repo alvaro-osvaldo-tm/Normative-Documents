@@ -4,15 +4,18 @@
 	"author": "",
 	"description": "A new empty git repository",
 	"scripts": {},
-	"dependencies": {},
 	"devDependencies": {
-		"lint-staged": "^15.2.10",
-		"prettier": "^3.3.3",
-		"shellcheck": "^3.0.0",
 		"@commitlint/cli": "^19.4.0",
 		"@commitlint/config-conventional": "^19.2.2",
 		"conventional-changelog-atom": "^5.0.0",
+		"gulp": "^5.0.0",
+		"gulp-cli": "^3.0.0",
+		"gulp-watch": "^5.0.1",
 		"husky": "^9.1.5",
+		"lint-staged": "^15.2.10",
+		"prettier": "^3.3.3",
+		"shellcheck": "^3.0.0",
+		"shelljs": "^0.8.5",
 		"typescript": "^5.5.4"
 	}
 }
