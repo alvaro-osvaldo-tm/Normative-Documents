@@ -6,7 +6,7 @@ This concept It's not about an enterprise-specific implementation , but the arch
 
 ## Classification
 
-Wikidata (Q1048431) refers it as subclass from "Software Architecture", however this concept is made under a architecture viewpoint , since an enterprise architecture can be purely business domain oriented and no include the software viewpoint.
+Based in Wikidata (Q1048431) concetp, has "Software Architecture" as subclass, however this concept is made under a business-driven viewpoint.
 
 ## Practiced by
 
