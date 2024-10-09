@@ -1,7 +1,7 @@
 {
-	"*.md": ["npx prettier --log-level warn --write"],
-	"*.ts": ["npx prettier --log-level warn --write"],
-	"*.json": ["npx prettier --log-level warn --write"],
+	"*.md": ["Operations/Engineering/Lint/file.sh"],
+	"*.ts": ["Operations/Engineering/Lint/file.sh"],
+	"*.json": ["Operations/Engineering/Lint/file.sh"],
 	"*.sh": ["npx shellcheck"],
 	".husky/*": ["npx shellcheck -e SC1081"]
 }
