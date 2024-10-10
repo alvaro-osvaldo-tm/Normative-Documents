@@ -1,4 +1,6 @@
-#!/bin/bash -e
+#!/usr/bin/env bash
+
+set -e
 
 # ===============================================
 # Lints a file choosing the correct linter
@@ -48,24 +50,19 @@ function CONFIGURE {
     local RELATIVE="$PWD"
 
     ## Move to rootdir
-    cd "$(git rev-parse --show-toplevel)"
+    cd "$(git rev-parse --show-toplevel)" || exit 1
 
     ## Load terminal helpers
+    # shellcheck disable=1091
     . "Library/Software/Terminal/bootstrap.sh"
 
     ## ======================================
     ## Configure script parameters
     ## ======================================
 
-    ## Script version information
-    declare -A SCRIPT
-    SCRIPT[UUID]="00.00.00.00"
-    SCRIPT[VERSION]="0.0.1.dev"
-    SCRIPT[TEMPLATE]="00.00.00.QN.21 0.3.1"
-
     ## Configure cache for linter
     declare -A CACHE
-    CACHE[DIR]="$PWD/var/cache/operations/engineering/lint"
+    CACHE[DIR]="var/cache/operations/engineering/lint"
     CACHE[PRETTIER]="${CACHE[DIR]}/prettier.json"
 
     if [ ! -d "${CACHE[DIR]}" ]; then
@@ -80,14 +77,6 @@ function CONFIGURE {
 
     ## The file for processing
     FILES=()
-
-    ## Script state
-
-    ### In development mode
-    SCRIPT[IS_DEV]=${IS_DEV:=0}
-
-    ### In testing mode
-    SCRIPT[IS_TEST]=${IS_TEST:=0}
 
     ## Process parameters received from user
     OPTIONS=$(getopt -l "help,verbose,recursive" -o "h,v,r" -- "$@") || exit 1
@@ -128,33 +117,24 @@ function CONFIGURE {
         --)
             # Receive the files for processing
 
-            shift
-
-            FILES+=("$1")
-
             while true; do
 
                 shift
 
-                if [[ "$1" == "" ]]; then
+                FILE="$1"
+
+                if [[ "$FILE" == "" ]]; then
                     break
                 fi
 
-                FILES+=($1)
+                ## Ensure all files is absolute path
 
-            done
-
-            ## Ensure all files is absolute path
-
-            for INDEX in "${!FILES[@]}"; do
-
-                FILE=${FILES[INDEX]}
-
-                if [[ "$FILE" =~ ^\. ]]; then
-                    FILE="$(realpath "$RELATIVE/$FILE")"
+                if [ ! -f "$FILE" ] && [ ! -d "$FILE" ]; then
+                    FILE=$(realpath "$RELATIVE/$1")
                 fi
 
-                FILES[INDEX]="$FILE"
+                FILES+=("$FILE")
+
             done
 
             break
@@ -170,6 +150,11 @@ function CONFIGURE {
 # Execute the correct linter for a file
 function LINT() {
 
+    local FILE="$1"
+
+    # File hash to check if was changed
+    HASH=$(stat --format="%i %s %Y" "$FILE")
+
     # Python
     if [[ "$FILE" =~ .py$ ]]; then
 
@@ -181,8 +166,6 @@ function LINT() {
     fi
 
     # Verify if can use Prettier
-    PRETTIER=0
-
     if [[ "$FILE" =~ .md$ ]]; then
         # Markdown
         PRETTIER=1
@@ -194,6 +177,7 @@ function LINT() {
         PRETTIER=1
     else
         # No lint exists for the file
+        PRETTIER=0
         RESULT=255
     fi
 
@@ -213,15 +197,25 @@ function LINT() {
 
     fi
 
-    return $RESULT
+    # Lint sucessfull , check if file was changed
+    if [[ $RESULT -eq 0 ]]; then
+
+        if [ "$HASH" == "$(stat --format="%i %s %Y" "$FILE")" ]; then
+            # No change
+            RESULT=255
+        fi
+
+    fi
+
+    return "$RESULT"
 
 }
 
 # Inform the current lint status
 function INFORM() {
 
-    CODE="$1"
-    FILE="$2"
+    local CODE="$1"
+    local FILE="$2"
 
     if [[ $CODE -eq 0 ]]; then
 
@@ -230,6 +224,8 @@ function INFORM() {
         setterm --foreground green --bold on
 
         printf "ꪜ"
+
+        LINTED+="$FILE"
 
     elif [[ $CODE -eq 255 ]]; then
 
@@ -243,7 +239,7 @@ function INFORM() {
 
         printf "×"
 
-        FAILURES+="$FILE"        
+        FAILURES+="$FILE"
 
     fi
 
@@ -252,24 +248,43 @@ function INFORM() {
 }
 
 # Report the operation
-function REPORT () {
-   
-    if [[ "${FAILURES[@]}" == "" ]]; then
-        printf "%s\n"  " - No failures was detected."
-        return 0
+function REPORT() {
+
+    local FILE
+
+    printf "%s\n" "============================================"
+    printf "%s\n" "               Lint Report                  "
+    printf "%s\n" "============================================"
+
+    printf "\n"
+
+    if [[ ${#LINTED[@]} -gt 0 ]]; then
+
+        printf " %s files linted\n" "${#LINTED[@]}"
+
+        for FILE in "${LINTED[@]}"; do
+            printf "%s\n" "$FILE"
+        done | nl
+
+    else
+        printf "%s\n" " - No file was linted."
     fi
 
-    COUNT=0        
-    for FAILED in ${FAILURES[@]}; do
-        COUNT=$(($COUNT+1))
-    done
+    printf "\n"
 
-    printf "%s files failed to lint\n"  "$COUNT"
+    if [[ ${#FAILURES[@]} -gt 0 ]]; then
 
-    for FAILED in ${FAILURES[@]}; do
-        printf "%s\n" "$FAILED"
-    done | nl
-    
+        printf " %s files failed to lint\n" "${#FAILURES[@]}"
+
+        for FILE in "${FAILURES[@]}"; do
+            printf "%s\n" "$FILE"
+        done | nl
+
+    else
+        printf "%s\n" " - No failures was detected."
+    fi
+
+    printf "\n"
 }
 
 ## ======================================
@@ -286,13 +301,16 @@ CONFIGURE "$@"
 (
 
     # Report variable
-    FAILURES=()
+    export FAILURES=()
+    export LINTED=()
 
     IFS=$'\n'
+    
+    INDEX=0
+    while [ $INDEX -lt ${#FILES[@]} ]; do
 
-    for FILE in "${FILES[@]}"; do
+        FILE=${FILES[INDEX]}
 
-        # Lint a directory
         if [ -d "$FILE" ]; then
 
             OPTIONS=("$FILE")
@@ -302,35 +320,30 @@ CONFIGURE "$@"
             fi
 
             OPTIONS+=(-type f)
-            OPTIONS+=(\! -wholename "**/.git" \! -wholename "**/node_modules/**")
-
-            for FILE in $(
-                find "${OPTIONS[@]}"
-            ); do
-
-                # Lint the file in the directory
-                set +e
-                LINT "$FILE"
-                CODE=$?
-                set -e
-                INFORM $CODE "$FILE"
-
+            OPTIONS+=(\! -wholename "**/.git/*" \! -wholename "**/node_modules/**")
+            
+            #shellcheck disable=SC2044
+            for FOUND in $(find "${OPTIONS[@]}"); do
+                FILES+=("$FOUND")  
             done
-
+            
+            INDEX=$((INDEX + 1))
+            
             continue
         fi
 
-        # Lint a file
-
+        # Lint the file
         set +e
         LINT "$FILE"
         CODE=$?
         set -e
         INFORM $CODE "$FILE"
 
+        INDEX=$((INDEX + 1))
+        
     done
 
-    printf " DONE\n"
+    printf " DONE\n"    
 
     REPORT
 
